@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{firstCommonData}}</h1>
-    <h2>这是a模块下受前端路由控制的子模块</h2>
+    <h2>这是a模块下受前端路由控制的子模块111</h2>
     <div>这一块的内容才是受前端路由控制的</div>
     <a href="/b">跳转到b模块</a>
     <a href="javascript:void(0)" @click="myJump">跳转到b模块click</a>
