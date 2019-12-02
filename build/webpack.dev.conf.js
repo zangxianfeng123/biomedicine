@@ -75,7 +75,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       })
       // 访问根路径时重定向到moduleList
       app.get('/', (req, res, next) => {
-        res.redirect('/a')
+        res.redirect('/desktop')
       })
     }
   },
