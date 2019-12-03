@@ -16,7 +16,7 @@
         <li class="center">
           <dl>
             <dt>
-              <img src="../../assets/images/esp.png" />
+              <img src="../../../assets/images/esp.png" />
               <h3>问题反馈及查询</h3>
               <p>
                 <a href="###">问题反馈</a>|
@@ -24,14 +24,14 @@
               </p>
             </dt>
             <dd>
-              <img src="../../assets/images/email.png" />
+              <img src="../../../assets/images/email.png" />
               <h3>平台答疑邮箱</h3>
               <p>
                 <a href="###">li.dongsheng@neusoft.com</a>
               </p>
             </dd>
             <dd>
-              <img src="../../assets/images/tel.png" />
+              <img src="../../../assets/images/tel.png" />
               <h3>客服电话</h3>
               <p>0532-88939169</p>
             </dd>
@@ -39,7 +39,7 @@
           </dl>
         </li>
         <li class="last">
-          <img src="../../assets/images/code.png" />
+          <img src="../../../assets/images/code.png" />
         </li>
       </ul>
     </div>

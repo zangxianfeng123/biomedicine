@@ -321,9 +321,9 @@
 </template>
 
 <script>
-import rightnews from "./right-news";
-import indexfooter from "./index-footer";
-import indexheader from "./index-header";
+import rightnews from "./components/News";
+import indexfooter from "./components/Footer";
+import indexheader from "./components/Header";
 export default {
   name: "desktop",
   data() {

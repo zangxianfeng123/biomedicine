@@ -221,9 +221,9 @@
 </template>
 
 <script>
-import suppliernews from "./right-news-supplier";
-import indexfooter from "./index-footer";
-import indexheader from "./index-header";
+import suppliernews from "./components/NewsSupplier";
+import indexfooter from "./components/Footer";
+import indexheader from "./components/Header";
 export default {
   name: "desktop",
   data() {

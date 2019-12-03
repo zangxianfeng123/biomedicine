@@ -7,7 +7,7 @@
 <div class="des-header clearfix">
   <!-- 左侧 -->
   <div class="des-header-left clearfix">
-    <img class="des-logo" src="../../assets/images/logo-new.png" />
+    <img class="des-logo" src="../../../assets/images/logo-new.png" />
     <ul class="des-nav">
       <li class="active">
         <a href="#">
@@ -46,13 +46,13 @@
     
     <ul>
       <li class="dex-admininfo">
-        <img src="../../assets/images/user.png" />
+        <img src="../../../assets/images/user.png" />
         <p>admin</p></li>
 
-        <li class="des-index-icon"><img src="../../assets/images/home.png" /></li>
-        <li class="des-index-icon"><img src="../../assets/images/nav.png" /></li>
-        <li class="des-index-icon"><img src="../../assets/images/messages.png" /> <span class="des-number">50</span></li>
-        <li class="des-index-icon"><img src="../../assets/images/close.png" /></li>
+        <li class="des-index-icon"><img src="../../../assets/images/home.png" /></li>
+        <li class="des-index-icon"><img src="../../../assets/images/nav.png" /></li>
+        <li class="des-index-icon"><img src="../../../assets/images/messages.png" /> <span class="des-number">50</span></li>
+        <li class="des-index-icon"><img src="../../../assets/images/close.png" /></li>
     </ul>
   </div>
 </div>
