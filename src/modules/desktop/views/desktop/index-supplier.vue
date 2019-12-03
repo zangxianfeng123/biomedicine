@@ -1,7 +1,8 @@
+
   <!-- 
-    功能：首页
+    功能：首页-供应商
     作者：李玲
-    时间：2019-12-02
+    时间：2019-12-03
   -->
 <template>
   <div class="des-demo">
@@ -14,65 +15,22 @@
         <!-- 供应商 -->
         <div class="des-resource">
           <h3 class="des-column">
-            <cite>&nbsp;</cite>模块商资源
+            <cite>&nbsp;</cite>供应商资源
           </h3>
           <ul class="clearfix">
             <li>
-              <img src="../../assets/images/resource-1.png" />
-              <p>供应商名录</p>
+              <img src="../../assets/images/supplier-1.png" />
+              <p>行业资质</p>
             </li>
 
             <li>
-              <img src="../../assets/images/resource-2.png" />
+              <img src="../../assets/images/supplier-2.png" />
               <p>新供应商公示</p>
             </li>
 
             <li>
-              <img src="../../assets/images/resource-3.png" />
-              <p>行业资质校核</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/resource-4.png" />
-              <p>资质列表</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/resource-5.png" />
+              <img src="../../assets/images/supplier-3.png" />
               <p>供应商绩效</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-6.png" />
-              <p>打标签</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/resource-7.png" />
-              <p>信用等级</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-8.png" />
-              <p>策略变更</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-9.png" />
-              <p>保证金</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-10.png" />
-              <p>V码管理</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-11.png" />
-              <p>经营风险</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-12.png" />
-              <p>平台规则</p>
-            </li>
-            <li>
-              <img src="../../assets/images/resource-13.png" />
-              <p>需求统计</p>
             </li>
           </ul>
         </div>
@@ -85,69 +43,17 @@
           <ul class="clearfix">
             <li>
               <img src="../../assets/images/needs-1.png" />
-              <p>公开需求发布</p>
+              <p>公开需求</p>
             </li>
 
             <li>
               <img src="../../assets/images/needs-2.png" />
-              <p>定向需求发布</p>
+              <p>定向需求</p>
             </li>
 
             <li>
               <img src="../../assets/images/needs-3.png" />
-              <p>衍生需求发布</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/needs-4.png" />
-              <p>公开需求列表</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/needs-5.png" />
-              <p>定向需求列表</p>
-            </li>
-            <li>
-              <img src="../../assets/images/needs-6.png" />
-              <p>衍生需求列表</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- 价格配额-->
-        <div class="des-resource">
-          <h3 class="des-column">
-            <cite>&nbsp;</cite>
-            价格配额
-          </h3>
-          <ul class="clearfix">
-            <li>
-              <img src="../../assets/images/quota-1.png" />
-              <p>招标价格</p>
-            </li>
-            <li>
-              <img src="../../assets/images/quota-2.png" />
-              <p>招标配额</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/quota-3.png" />
-              <p>同料不同价</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/quota-4.png" />
-              <p>购销联动</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/quota-5.png" />
-              <p>原材料联动</p>
-            </li>
-
-            <li>
-              <img src="../../assets/images/quota-6.png" />
-              <p>日常数据管理</p>
+              <p>衍生需求</p>
             </li>
           </ul>
         </div>
@@ -195,25 +101,20 @@
           </ul>
         </div>
 
-        <!-- 对账结算-->
+        <!-- 价格配额-->
         <div class="des-resource">
           <h3 class="des-column">
             <cite>&nbsp;</cite>
-            对账结算
+            价格配额
           </h3>
           <ul class="clearfix">
             <li>
               <img src="../../assets/images/settle-1.png" />
-              <p>贴息录入</p>
+              <p>发票管理</p>
             </li>
-            <li>
-              <img src="../../assets/images/settle-2.png" />
-              <p>索赔数据</p>
-            </li>
-
             <li>
               <img src="../../assets/images/settle-3.png" />
-              <p>付款预算</p>
+              <p>贴息标准申请</p>
             </li>
 
             <li>
@@ -226,7 +127,7 @@
 
       <!-- 右侧 -->
       <div class="des-main-right">
-        <rightnews></rightnews>
+        <suppliernews></suppliernews>
       </div>
     </div>
 
@@ -313,7 +214,6 @@
       </div>
     </div>
 
-
     <!-- 底部 -->
     <indexfooter></indexfooter>
 
@@ -321,7 +221,7 @@
 </template>
 
 <script>
-import rightnews from "./right-news";
+import suppliernews from "./right-news-supplier";
 import indexfooter from "./index-footer";
 import indexheader from "./index-header";
 export default {
@@ -335,9 +235,12 @@ export default {
     };
   },
   components: {
-    rightnews,
+    suppliernews,
     indexfooter,
     indexheader
   }
 };
 </script>
+
+
+
