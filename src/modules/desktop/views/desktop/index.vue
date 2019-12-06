@@ -1,6 +1,5 @@
   <!-- 
     功能：首页
-    作者：李玲
     时间：2019-12-02
   -->
 <template>
@@ -15,7 +14,6 @@
             :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal"
-            @select="handleSelect"
           >
             <el-menu-item index="1">首页</el-menu-item>
             <el-submenu index="2">
@@ -96,7 +94,7 @@
       <!-- 右侧 -->
       <div class="des-header-right">
         <ul>
-          <li class="dex-admininfo" @click="showCont">
+          <li class="dex-admininfo">
             <img src="../../assets/images/user.png" />
             <p>admin</p>
           </li>
@@ -117,7 +115,7 @@
           </h3>
           <ul class="clearfix">
             <li>
-              <a href="#"><img src="../../assets/images/resource-1.png" />
+              <a href="/workbranch/mytest/mytest"><img src="../../assets/images/resource-1.png" />
               <p>供应商名录</p></a>
             </li>
 
@@ -325,18 +323,17 @@
 
       <!-- 右侧 -->
       <div class="des-main-right">
-        <rightnews></rightnews>
+        <news></news>
       </div>
     </div>
     <!-- 底部 -->
-    <indexfooter></indexfooter>
+    <footer></footer>
 
   </div>
 </template>
 <script>
-import rightnews from "./components/News";
-import indexfooter from "./components/Footer";
-import indexheader from "./components/Header";
+import News from "./components/News";
+import Footer from "./components/Footer";
 export default {
   name: "desktop",
   data() {
@@ -353,24 +350,8 @@ export default {
     };
   },
   components: {
-    rightnews,
-    indexfooter,
-    indexheader
+    News,
+    Footer,
   },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    
-    hover: function(index) {
-      console.log(index);
-
-      //这里的逻辑该怎么写呢
-
-      //如何判断我鼠标经过的是第几个，让他对应的v-show变为true呢？
-
-      this.showUpdate = index;
-    }
-  }
 };
 </script>

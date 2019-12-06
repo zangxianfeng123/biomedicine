@@ -7,7 +7,7 @@ const path = require('path')
 const MODULE = process.env.MODULE_ENV || 'undefined'
 // 入口模板路径
 const htmlTemplate =  `./src/modules/${MODULE}/index.html`
-
+const assetsPublicPath = `/${MODULE}/`
 module.exports = {
   dev: {
 
@@ -67,7 +67,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     // 这里的路径改成相对路径，原来是assetsPublicPath: '/',
     // assetsPublicPath: '/',
-    assetsPublicPath: '/',
+    assetsPublicPath: assetsPublicPath,//'/workbranch/',
 
     /**
      * Source Maps

@@ -1,12 +1,10 @@
 
   <!-- 
     功能：首页-供应商
-    作者：李玲
     时间：2019-12-03
   -->
 <template>
   <div class="des-demo">
-    <!-- <indexheader></indexheader> -->
     <div class="des-header clearfix">
       <!-- 左侧 -->
       <div class="des-header-left clearfix">
@@ -332,19 +330,18 @@
 
       <!-- 右侧 -->
       <div class="des-main-right">
-        <rightnews></rightnews>
+        <news></news>
       </div>
     </div>
 
     <!-- 底部 -->
-    <indexfooter></indexfooter>
+    <footer></footer>
   </div>
 </template>
 
 <script>
-import rightnews from "./components/News";
-import indexfooter from "./components/Footer";
-import indexheader from "./components/Header";
+import News from "./components/News";
+import Footer from "./components/Footer";
 export default {
   name: "desktop",
   data() {
@@ -361,9 +358,8 @@ export default {
     };
   },
   components: {
-    rightnews,
-    indexfooter,
-    indexheader
+    News,
+    Footer,
   },
   methods: {
     handleSelect(key, keyPath) {
