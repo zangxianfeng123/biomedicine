@@ -1,4 +1,4 @@
-import { asyncRouterMap, constantRouterMap } from '@workbranch/router'
+import { asyncRouterMap, constantRouterMap, anotherRouterMap } from '@workbranch/router'
 
 /**
  * 通过meta.role判断是否与当前用户权限匹配
@@ -61,7 +61,10 @@ const permission = {
       state.addRouters = routers
       state.routers = constantRouterMap.concat(routers)
       console.log('state.routers', state.routers)
-    }
+    },
+    SET_NEW_ROUTER:(state, routers) => {
+      state.routers = anotherRouterMap
+    },
   },
   actions: {
     InitRoutes({commit,state}, authRouter){

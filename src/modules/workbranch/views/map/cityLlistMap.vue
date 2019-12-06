@@ -8,7 +8,7 @@
     <bm-city-list anchor="BMAP_ANCHOR_TOP_LEFT"></bm-city-list>
   </baidu-map>
 </div>
-</template>>
+</template>
 <style>
 .map {
   width: 100%;

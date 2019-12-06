@@ -32,6 +32,7 @@
         <calendar/>
       </el-col>
     </el-row>
+    <router-link to="/mytest/mytest">按钮</router-link>
   </div>
 </template>
 

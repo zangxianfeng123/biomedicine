@@ -8,7 +8,7 @@
 </template>
 
 <script>
-//import { BmlMarkerClusterer } from 'vue-baidu-map'
+import { mapActions, mapMutations } from 'vuex'
 export default {
   data() {
     // }
@@ -17,15 +17,14 @@ export default {
     }
   },
   created() {
-    // 插入 10 个随机点
-    for (let i = 0; i < 10; i++) {
-      const position = { lng: Math.random() * 40 + 85, lat: Math.random() * 30 + 21 }
-      this.markers.push(position)
-    }
+    this.SET_NEW_ROUTER()
   },
-  components: {
-    //BmlMarkerClusterer
+  methods:{
+    ...mapMutations([
+      'SET_NEW_ROUTER'
+    ])
   }
+
 }
 </script>
 <style>

@@ -22,6 +22,21 @@ import Layout from '@/components/layout/Layout'
     icon: 'svg-name'             the icon show in the sidebar,
   }
 **/
+export const anotherRouterMap = [
+  {
+    path: '/functionalArea',
+    component: Layout,
+    meta: { title: 'functionalArea', icon: 'el-icon-user-solid' },
+    children: [
+      {
+        path: 'functionalArea',
+        name: '功能区',
+        component: () => import('../views/functionalArea/functionalArea'),
+        meta: { title: '功能区', icon: 'el-icon-user-solid' }
+      }
+    ]
+  },
+]
 export const constantRouterMap = [
   // {
   //   path: '/',
@@ -52,6 +67,19 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/mytest',
+    component: Layout,
+    meta: { title: 'mytest', icon: 'el-icon-user-solid' },
+    children: [
+      {
+        path: 'mytest',
+        name: 'mytest',
+        component: () => import('../views/map/pointMap'),
+        meta: { title: 'mytest', icon: 'el-icon-user-solid' }
+      }
+    ]
+  },
   // 任务待办
   {
     path: '/map',
@@ -75,7 +103,8 @@ export const constantRouterMap = [
 ]
 
 export default new Router({
-  // mode: 'history', //后端支持可开
+  base:'/workbranch/',
+  mode: 'history', //后端支持可开
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

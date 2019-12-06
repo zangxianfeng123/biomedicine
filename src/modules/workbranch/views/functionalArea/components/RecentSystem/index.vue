@@ -9,7 +9,7 @@
                 >
                     <pill-tag 
                         :name="item.type" 
-                        :src="item.url"
+                        src="../../../../assets/images/u113.png"
                         @showMask="showMask(item)" 
                         @hideMask="hideMask"
 

@@ -37,7 +37,7 @@ router.beforeEach((to, from, next) => {
         })
         
       }
-      else if(store.getters.addRouters.length == 0){ //刷新页面后asyncRouter变为空 重新获取权限路由
+      /*else if(store.getters.addRouters.length == 0){ //刷新页面后asyncRouter变为空 重新获取权限路由
         //store.dispatch('InitRoutes',store.getters.authRouter).then(()=>{
           //alert(to.path)
           store.dispatch('GenerateRoutes', roles).then(() => { // 根据roles权限生成可访问的路由表
@@ -47,7 +47,7 @@ router.beforeEach((to, from, next) => {
         //})
         
 
-      } else {
+      }*/ else {
             console.log("roles111:",store.getters.roles)
             console.log("addRouters:",store.getters.addRouters)
             
