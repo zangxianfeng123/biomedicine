@@ -5,21 +5,21 @@
   -->
 <template>
     <div class="des-main-right"> 
-        <h3 class="des-column"><cite>&nbsp;</cite>海尔新闻</h3>
+        <h3 class="des-column-right">海尔新闻</h3>
         <ul>
           <li v-for="item in items">
           <span class="title">{{item.name}}</span><span class="data">{{item.data}}</span>
         </li>
         </ul>
 
-        <h3 class="des-column"><cite>&nbsp;</cite>公告中心</h3>
+        <h3 class="des-column-right">公告中心</h3>
         <ul>
           <li v-for="item in items1">
           <span class="title">{{item.name}}</span><span class="data">{{item.data}}</span>
         </li>
         </ul>
 
-        <h3 class="des-column"><cite>&nbsp;</cite>消息通知</h3>
+        <h3 class="des-column-right">消息通知</h3>
         <ul>
           <li v-for="item in items2">
           <span class="title">{{item.name}}</span><span class="data">{{item.data}}</span>
