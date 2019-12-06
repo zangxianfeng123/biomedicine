@@ -19,6 +19,10 @@ export default {
   created() {
     this.SET_NEW_ROUTER()
   },
+  mounted(){
+    //let testooo = window.localStorage.getItem("testooo")
+    //alert(testooo)
+  },
   methods:{
     ...mapMutations([
       'SET_NEW_ROUTER'
