@@ -17,7 +17,7 @@
           <i slot="prefix" class="el-icon-edit-outline" style=""></i>
           <template slot="append">
             <a href="javascript:void(0)">
-              <img src="../../assets/images/logoSimple.png" width="80" height="32"/>
+              <img src="../../assets/images/logo-new.png" width="80" height="32"/>
             </a>
           </template>
         </el-input>

@@ -1,11 +1,11 @@
 <template>
-  <div class="app-wrapper" :class="classObj">
-    <sidebar class="sidebar-container"></sidebar>
+  <div class="app-wrapper">
     <div>
       <navbar></navbar>
     </div>
     
     <div class="main-container">
+      <sidebar class="sidebar-container"></sidebar>
       <app-main></app-main>
     </div>
   </div>
@@ -13,7 +13,6 @@
 
 <script>
 import { Navbar, Sidebar, AppMain } from './components'
-import ResizeMixin from './mixin/ResizeHandler'
 
 export default {
   name: 'layout',
@@ -22,25 +21,13 @@ export default {
     Sidebar,
     AppMain,
   },
-  mixins: [ResizeMixin],
-  computed: {
-    sidebar() {
-      return this.$store.state.app.sidebar
-    },
-    classObj() {
-      return {
-        hideSidebar: !this.sidebar.opened,
-        withoutAnimation: this.sidebar.withoutAnimation
-      }
-    },
-  },
+  //mixins: [ResizeMixin],
 }
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-  @import "src/modules/workbranch/styles/mixin.scss";
   .app-wrapper {
-    @include clearfix;
+    //@include clearfix;
     position: relative;
     min-height: 100vh;
     height: 100%;

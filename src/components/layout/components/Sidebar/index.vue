@@ -5,9 +5,8 @@
       mode="vertical"
       :show-timeout="200"
       :default-active="$route.path"
-      :collapse="isCollapse"
       text-color="#444"
-      active-text-color="#0076bd"
+      active-text-color="#fff"
     >
       <sidebar-item :routes="permission_routers"></sidebar-item>
     </el-menu>
@@ -22,12 +21,8 @@ export default {
   components: { SidebarItem, /*logo*/ },
   computed: {
     ...mapGetters([
-      'sidebar',
       'permission_routers'
     ]),
-    isCollapse() {
-      return !this.sidebar.opened
-    }
   }
 }
 </script>

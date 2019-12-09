@@ -16,9 +16,9 @@ export default {
       markers: []
     }
   },
-  created() {
+  /*created() {
     this.SET_NEW_ROUTER()
-  },
+  },*/
   mounted(){
     //let testooo = window.localStorage.getItem("testooo")
     //alert(testooo)

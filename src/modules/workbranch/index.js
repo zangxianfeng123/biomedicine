@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/display.css';
 //import '../static/css/iconfont/1.0.0/index.css' /* icofont*/
 
 // css
-import './styles/index.scss' // global css
+import '@/styles/index.scss' // global css
 
 import './mock'
 

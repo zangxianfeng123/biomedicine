@@ -1,0 +1,103 @@
+#app {
+  // 主体区域
+  .main-container {
+    min-height: 100%;
+    transition: margin-left .28s;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    position: relative;
+  } // 侧边栏
+  .sidebar-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 12px;
+    -webkit-transition: width 0.28s;
+    transition: width 0.28s;
+    width: 120px !important;
+    font-size: 0px;
+    float: left;
+    background-color: #fbfbfb;
+    border-right: 1px solid #e6e6e6;
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+    .scrollbar-wrapper {
+      height: calc(100% + 15px);
+      margin: 0 !important;
+      overflow: auto;
+      .el-scrollbar__view {
+        height: 100%;
+      }
+    }
+    .is-horizontal {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+      background: none;
+    }
+    .el-menu-item, 
+    .el-submenu__title{
+      height: 32px;
+      line-height: 32px;
+      color: #666;
+      padding: 0 12px !important;
+    }
+    .el-submenu{
+      .el-menu-item{
+        padding: 0 0 0 32px !important;
+        font-size: 12px;
+        min-width: 88px;
+      }
+      .el-icon-circle-plus-outline:before{
+        content:"\E723";
+      }
+    }
+    .el-submenu.is-opened{
+      .el-icon-circle-plus-outline:before{
+        content:"\E722";
+      }
+    }
+    .el-submenu__icon-arrow {
+      display: none;
+    }
+    .el-menu-item.is-active{
+      background-color: #005fa7;
+    }
+  }
+.el-menu-item [class^=el-icon-],
+.el-submenu [class^=el-icon-]{
+  width: auto;
+  font-size: 14px;
+  margin: 0;
+}
+
+}
+
+.el-icon-arrow-down:before{
+  color: #c1c1c1;
+}
+/*选中样式*/
+.hamburger-container{
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f3f3;
+}
+.el-menu-item.is-active{
+  background: #efefef;
+}

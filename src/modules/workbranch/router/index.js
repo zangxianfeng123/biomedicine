@@ -26,13 +26,13 @@ export const anotherRouterMap = [
   {
     path: '/functionalArea',
     component: Layout,
-    meta: { title: 'functionalArea', icon: 'el-icon-user-solid' },
+    meta: { title: 'functionalArea', icon: 'el-icon-remove-outline' },
     children: [
       {
         path: 'functionalArea',
         name: '功能区',
         component: () => import('../views/functionalArea/functionalArea'),
-        meta: { title: '功能区', icon: 'el-icon-user-solid' }
+        meta: { title: '功能区', icon: 'el-icon-remove-outline' }
       }
     ]
   },
@@ -57,26 +57,26 @@ export const constantRouterMap = [
   {
     path: '/functionalArea',
     component: Layout,
-    meta: { title: 'functionalArea', icon: 'el-icon-user-solid' },
+    meta: { title: 'functionalArea', icon: 'el-icon-remove-outline' },
     children: [
       {
         path: 'functionalArea',
         name: '功能区',
         component: () => import('../views/functionalArea/functionalArea'),
-        meta: { title: '功能区', icon: 'el-icon-user-solid' }
+        meta: { title: '功能区', icon: 'el-icon-remove-outline' }
       }
     ]
   },
   {
     path: '/mytest',
     component: Layout,
-    meta: { title: 'mytest', icon: 'el-icon-user-solid' },
+    meta: { title: 'mytest', icon: 'el-icon-circle-plus-outline' },
     children: [
       {
         path: 'mytest',
         name: 'mytest',
         component: () => import('../views/map/pointMap'),
-        meta: { title: 'mytest', icon: 'el-icon-user-solid' }
+        meta: { title: 'mytest', icon: 'el-icon-circle-plus-outline' }
       }
     ]
   },
@@ -88,7 +88,7 @@ export const constantRouterMap = [
     name: 'map',
     meta: {
       title: '任务待办',
-      icon: 'el-icon-s-finance'
+      icon: 'el-icon-circle-plus-outline'
     },
     alwaysShow: true,
     children: [
@@ -103,8 +103,8 @@ export const constantRouterMap = [
 ]
 
 export default new Router({
-  base:'/workbranch/',
-  mode: 'history', //后端支持可开
+  //base:'/workbranch/',
+  //mode: 'history', //后端支持可开
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

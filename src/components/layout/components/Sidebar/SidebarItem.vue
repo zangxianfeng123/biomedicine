@@ -1,8 +1,8 @@
 <template>
   <div class="menu-wrapper">
-    <el-row type="flex" class="row-bg" justify="center" @click="toggleSideBar">
+    <!--<el-row type="flex" class="row-bg" justify="center" @click="toggleSideBar">
       <nx-hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></nx-hamburger>
-    </el-row>
+    </el-row>-->
     
     <template v-for="item in routes" v-if="!item.hidden&&item.children">
 
@@ -18,7 +18,7 @@
       <el-submenu v-else :index="item.name||item.path" :key="item.name">
         <template slot="title">
 
-          <i v-if="item.children[0].meta&&item.children[0].meta.icon" :class="item.children[0].meta.icon"></i>
+          <i v-if="item.meta&&item.meta.icon" :class="item.meta.icon"></i>
           <span v-if="item.meta&&item.meta.title" slot="title">{{item.meta.title}}</span>
         </template>
 
@@ -28,7 +28,7 @@
           <router-link v-else :to="item.path+'/'+child.path" :key="child.name">
             <el-menu-item :index="item.path+'/'+child.path">
 
-              <i v-if="item.children[0].meta&&item.children[0].meta.icon" :class="item.children[0].meta.icon"></i>
+              <!--<i v-if="item.children[0].meta&&item.children[0].meta.icon" :class="item.children[0].meta.icon"></i>-->
               <span v-if="child.meta&&child.meta.title" slot="title">{{child.meta.title}}</span>
             </el-menu-item>
           </router-link>
@@ -41,7 +41,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import nxHamburger from '@/components/nx-hamburger'
 export default {
   name: 'SidebarItem',
   props: {
@@ -52,9 +51,6 @@ export default {
       type: Boolean,
       default: false
     }
-  },
-  components:{
-    nxHamburger
   },
   computed:{
     ...mapGetters(['sidebar', 'name', 'avatar']),
