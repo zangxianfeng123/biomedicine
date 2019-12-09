@@ -95,7 +95,7 @@
       <!-- 右侧 -->
       <div class="des-header-right">
         <ul>
-          <li class="dex-admininfo" @click="showCont">
+          <li class="des-admininfo" @click="showCont">
             <img src="../../assets/images/user.png" />
             <p>admin</p>
           </li>

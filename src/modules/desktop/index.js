@@ -11,6 +11,8 @@ import 'element-ui/lib/theme-chalk/index.css'//element-ui的css
 
 import './styles/index.scss'
 import '@/styles/index.scss'
+import './mock'
+import './permission'
 Vue.use(ElementUI) //使用elementUI
 
 Vue.config.productionTip = false

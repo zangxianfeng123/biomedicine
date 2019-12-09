@@ -1,21 +1,25 @@
-import { login, logout, getInfo } from '@workbranch/api/login'
+import { login, logout, getInfo } from '@desktop/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
-import { setStore, getStore, removeStore } from '@/utils/store'
+import router from '@desktop/router'
+import {
+  setStore,
+  getStore,
+  removeStore
+} from '@/utils/store'
 const user = {
   state: {
+    loginForm: {
+      username: 'admin',
+      password: '123456',
+      code:'FFFF'
+    },
     token: getToken('myToken') || undefined,
     name: getToken('name') || '',
     avatar: getToken('avatar') || '',
     roles: eval(getToken('roles')) || [],
-    isLock: getStore({
-      name: 'isLock'
-    }) || false,
-    lockPasswd: getStore({
-      name: 'lockPasswd'
-    }) || '',
     browserHeaderTitle: getStore({
       name: 'browserHeaderTitle'
-    }) || 'NxAdmin'
+    }) || '生物医疗'
   },
 
   mutations: {
@@ -38,14 +42,6 @@ const user = {
     SET_AUTHROUTER: (state,authRouter) => {
       state.authRouter = authRouter
       setToken('authRouter',authRouter)
-    },
-    SET_LOCK_PASSWD: (state, lockPasswd) => {
-      state.lockPasswd = lockPasswd
-      setStore({
-        name: 'lockPasswd',
-        content: state.lockPasswd,
-        type: 'session'
-      })
     },
     /*SET_LOCK: (state, action) => {
       state.isLock = true
@@ -73,23 +69,18 @@ const user = {
 
   actions: {
     // 登录
-    Login({ commit }, userInfo) {
-      const username = userInfo.username.trim()
+    Login({ commit,state }) {
+      let loginForm = state.loginForm;
+      let username = loginForm.username.trim();
       return new Promise((resolve, reject) => {
-        login(username, userInfo.password).then(res => {
-          
-          /*setToken('roles', res.roles[0])
-          setToken('name', res.name)
-          setToken('avatar', res.avatar)*/
-          //console.log("res::::",res)
+        login(username, loginForm.password).then(res => {
           commit('SET_TOKEN', res.token)
           commit('SET_ROLES', res.roles)
           commit('SET_NAME', res.name)
           commit('SET_AVATAR', res.avatar)
-          //commit('SET_AUTHROUTER', res.authRouter)
+          router.push({ path: '/' })
           resolve(res)
         }).catch(error => {
-            //alert("错没错？走没走？")走了
           reject(error)
         })
       })
@@ -114,7 +105,6 @@ const user = {
       })
     },
 
-    // 登出
     // 登出
     LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {

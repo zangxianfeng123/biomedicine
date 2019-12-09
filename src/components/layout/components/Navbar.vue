@@ -88,7 +88,7 @@
     <!-- 右侧 -->
     <div class="des-header-right">
       <ul>
-        <li class="dex-admininfo">
+        <li class="des-admininfo">
           <img src="../../../assets/images/user.png" />
           <p>admin</p>
         </li>

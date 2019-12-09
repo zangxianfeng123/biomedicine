@@ -1,6 +1,0 @@
-export { default as TodoRemind } from './TodoRemind'
-export { default as Notice } from './Notice'
-export { default as Process } from './Process'
-export { default as Advertisement } from './Advertisement'
-export { default as RecentSystem } from './RecentSystem'
-export { default as Calendar } from './Calendar'

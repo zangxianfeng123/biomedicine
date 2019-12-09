@@ -14,135 +14,8 @@ label {
 }
 
 html {
-  /*height: 100%;*/
   box-sizing: border-box;
 }
-/*新用到的*/
-.app-main {
-  padding-left: 140px;
-  box-sizing: border-box;
-  width: 1060px;
-  min-height: 400px;
-}
-
-/* // 头部 */
-.des-header{
-  width: 100%;
-  height: 50px;
-  margin: 0 auto;
-  padding: 0;
-  background: #004EA2;
-  overflow: hidden;
-}
-.des-header-left{ float: left;}
-.des-header-left .des-logo{ float: left; display:block; margin: 0 auto; width: 200px;height: 50px;}
-.des-header-left .des-nav{ float: left;height: 50px; line-height: 50px;vertical-align: middle;}
-.des-header-left .des-nav ul{ background: none;height: 50px;
-line-height: 50px;}
-.el-menu--horizontal>.el-menu-item{height: 50px;
-      line-height: 50px;}
-  .el-menu--horizontal>.el-submenu .el-submenu__title{height: 50px;
-  line-height: 50px; border-bottom: none;}
-  .el-menu--horizontal>.el-menu-item.is-active{ border: none; color: #fff}
-  .el-menu--horizontal>.el-menu-item.is-active:hover{border: none; color: #fff; background: none}
-.el-menu--horizontal>.el-menu-item.is-active{ background: none; color: #Fff;height: 50px;
-  line-height: 50px;}
-.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{color: #Fff; background: none; border-bottom:none;}
-.el-menu--horizontal>.el-submenu.is-opened .el-submenu__title{color: #Fff; background: none}
-.el-menu--horizontal>.el-submenu:hover .el-submenu__title{color: #Fff; background: none}
-.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus, .el-menu--horizontal>.el-menu-item:not(.is-disabled):hover, .el-menu--horizontal>.el-submenu .el-submenu__title:hover{
-  background: none;
-}
-.el-menu--horizontal .el-menu .el-menu-item.is-active, .el-menu--horizontal .el-menu .el-submenu.is-active>.el-submenu__title {
-  color: #0099ff;
-}
-
-.des-header-left .des-nav ul .el-submenu__title{color:#fff}
-.des-header-left .des-nav li{ float: left; color: #fff;}
-.des-header-left .des-nav li:hover{ color: #e6e6e6 !important;}
-.el-menu.el-menu--horizontal{
-  border-bottom: none;
-}
-
-.des-header-right {
-float: right;
-}
-.des-header-right ul {
-width: auto;
-}
-.des-header-right ul li {
-float: left;
-min-width: 60px;
-position: relative;
-}
-.dex-admininfo {
-margin: 7px auto;
-}
-.dex-admininfo img {
-float: left;
-width: 36px;
-display: inline-block;
-margin: 0 auto;
-}
-.dex-admininfo p {
-float: right;
-font-size: 10px;
-color: #fff;
-display: inline-block;
-height: 36px;
-line-height: 36px;
-padding: 0 10px;
-margin: 0;
-vertical-align: middle;
-}
-.des-index-icon {
-height: 25px;
-margin: 12px 0;
-border-left: #3c7db9 1px solid;
-}
-.des-index-icon img {
-width: 24px;
-display: block;
-margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.text-white {
-  color: #fff;
-} 
-#app {
-  height: 100%;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 a,
 a:focus,
 a:hover {
@@ -200,132 +73,97 @@ a:hover {
   background-color: #e6e6e6;
 }
 
-/*code {
-  background: #eef1f6;
-  padding: 15px 16px;
-  margin-bottom: 20px;
-  display: block;
-  line-height: 36px;
-  font-size: 15px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  a {
-    color: #337ab7;
-    cursor: pointer;
-    &:hover {
-      color: rgb(32, 160, 255);
-    }
-  }
-}*/
-
-
-
-.container {
-  padding: 30px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.el-button--primary{
+  background:#004ea2;
+  border-color: #004ea2;
 }
 
-.crumbs {
-  margin-bottom: 20px;
+/*新用到的*/
+.app-main {
+  padding-left: 140px;
+  box-sizing: border-box;
+  width: 1060px;
+  min-height: 400px;
 }
 
-/*VueEditor */
-
-.plugins-tips {
-  padding: 20px 10px;
-  margin-bottom: 20px;
-}
-
-//icon
-.warn-content {
-  background: rgba(66, 185, 131, .1);
-  border-radius: 2px;
-  padding: 16px;
-  padding: 1rem;
-  line-height: 1.6rem;
-  word-spacing: .05rem;
-  a {
-    color: #42b983;
-    font-weight: 600;
-  }
-}
-/*reverse calendar*/
-.el-calendar-table .el-calendar-day{
+/* 头部 */
+.des-header{
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
   padding: 0;
-  height: 28px;
-  line-height: 28px;
-}
-.el-calendar__body {
-  padding: 0px 20px 8px;
-}
-.el-calendar-table thead th {
-  padding: 8px 0;
-}
-
-/*BaseForm*/
-.form-box {
-  width: 600px;
-}
-
-.form-box .line {
-  text-align: center;
-}
-
-.el-time-panel__content::after,
-.el-time-panel__content::before {
-  margin-top: -7px;
-}
-
-.el-time-spinner__wrapper .el-scrollbar__wrap:not(.el-scrollbar__wrap--hidden-default) {
-  padding-bottom: 0;
-}
-
-/*common*/
-.wkb-cmm-margin-top8{
-  margin-top: 8px;
-}
-
-.wkb-cmm-text-nowrap {
-  white-space: nowrap;
-}
-.wkb-cmm-text-right{
-  text-align: right;
-}
-.wkb-cmm-text-center{
-  text-align: center;
-}
-.wkb-cmm-color-muted{
-  color: #888;
-}
-
-.wkb-cmm-text-ellipsis{
-  white-space: nowrap;
+  background: #004EA2;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
-
-.wkb-cmm-line-height36{
+.des-header-left{ float: left;}
+.des-header-left .des-logo{ float: left; display:block; margin: 0 auto; width: 200px;height: 50px;}
+.des-header-left .des-nav{ float: left;height: 50px; line-height: 50px;vertical-align: middle;}
+.des-header-left .des-nav ul{ background: none;height: 50px;
+line-height: 50px;}
+.des-nav .el-menu-item{
+  height: 50px;
+  line-height: 50px;
+}
+.des-nav .el-submenu .el-submenu__title{
+  height: 50px;
+  line-height: 50px;
+  border-bottom: none;
+}
+.des-nav .el-menu-item,
+.des-nav .el-menu-item.is-active,
+.des-nav .el-menu-item:hover{ 
+  color: #fff !important;
+  background: none !important;
+}
+.des-nav .el-menu-item:hover{
+  color: #e3e3e3 !important;
+}
+.des-nav .el-submenu.is-active .el-submenu__title,
+.des-nav .el-submenu.is-opened .el-submenu__title,
+.des-nav .el-submenu:hover .el-submenu__title,
+.des-header-left .des-nav ul .el-submenu__title{
+  color: #Fff;
+  background: none;
+}
+.des-nav .el-menu.el-menu--horizontal{
+  border-bottom: none;
+}
+.des-header-right {
+float: right;
+}
+.des-header-right ul {
+width: auto;
+}
+.des-header-right ul li {
+float: left;
+min-width: 60px;
+position: relative;
+}
+.des-admininfo {
+margin: 7px auto;
+}
+.des-admininfo img {
+  float: left;
+  width: 36px;
+  margin: 0 auto;
+}
+.des-admininfo p {
+  float: right;
+  font-size: 10px;
+  color: #fff;
+  height: 36px;
   line-height: 36px;
+  padding: 0 10px;
+  margin: 0;
+  vertical-align: middle;
 }
-
-.wkb-cmm-box{
-  line-height: 36px;
-  li:hover{
-    background-color: #efefef;
-  }
+.des-index-icon {
+  height: 25px;
+  margin: 12px 0;
+  border-left: #3c7db9 1px solid;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.des-index-icon img {
+  width: 24px;
+  display: block;
+  margin: 0 auto;
+}

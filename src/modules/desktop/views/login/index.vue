@@ -5,8 +5,18 @@
     </div>
     <div class="wkb-login-mainbox">
       <div class="wkb-login-main">
-        <p class="wkb-login-title">欢迎登录</p>
-        <userLogin></userLogin>
+        <p class="wkb-login-title">海尔生物医疗SRM系统</p>
+        <!--<userLogin></userLogin>-->
+        <el-tabs v-model="activeName" :stretch="true">
+          <el-tab-pane name="user">
+            <span slot="label" class="wkb-login-tabs-label">海尔用户登录</span>
+            <userLogin></userLogin>
+          </el-tab-pane>
+          <el-tab-pane name="supplier">
+            <span slot="label" class="wkb-login-tabs-label">供应商登录</span>
+            <supplierLogin></supplierLogin>
+          </el-tab-pane>
+        </el-tabs>
       </div>
     </div>
 
@@ -14,10 +24,13 @@
 </template>
 <script>
 import userLogin from './userlogin'
+import supplierLogin from './supplierLogin'
+
 export default {
   name: 'login',
   components: {
-    userLogin
+    userLogin,
+    supplierLogin
   },
   data() {
     return {
@@ -44,7 +57,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/images/logo-new.png");
+  background-image: url("../../assets/images/loginBgImg.jpg");
   background-size: cover;
 }
 .wkb-login-header{
@@ -74,21 +87,16 @@ export default {
     line-height: 32px;
   }
 }
-
-.wkb-login-main > p {
-  color: #76838f;
-}
 .wkb-login-title {
   margin: 0 0 20px;
   text-align: center;
-  color: #555;
+  color: #005FA7;
   letter-spacing: 3px;
-  font-size: 21px;
+  font-size: 18px;
 }
 .wkb-login-submit {
-  margin-top: 20px;
   width: 100%;
-  border-radius: 28px;
+  border-radius: 4px;
 }
 .wkb-login-form {
   margin: 10px 0;
@@ -96,7 +104,7 @@ export default {
     width: 270px;
   }
   .el-form-item {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
   .el-form-item__error{
     padding: 0;
@@ -122,8 +130,8 @@ export default {
   }
 }
 .wkb-insall-package{
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #0079FE;
   a:hover{
     text-decoration: underline;
   }

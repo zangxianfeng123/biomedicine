@@ -48,6 +48,7 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       '@workbranch': resolve('src/modules/workbranch'),
+      '@desktop': resolve('src/modules/desktop'),
       '@C':resolve('src/modules/c'),
     }
   },

@@ -6,6 +6,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '',
+      redirect:'/desktop'
+    },
     { 
       path: '/login', 
       component: () => import('../views/login'),
@@ -13,7 +17,7 @@ export default new Router({
       hidden: true
     },
     {
-      path: '/',
+      path: '/desktop',
       name: 'desktop',
       component: Desktop 
     }

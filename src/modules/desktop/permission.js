@@ -1,8 +1,11 @@
 import router from './router'
 import store from './store'
 import { Message } from 'element-ui'
-import { getToken } from '@/utils/auth' 
-import {setTitle} from '@/utils/util'
+import { getToken } from '@/utils/auth'
+import {
+  setTitle
+} from '@/utils/util'
+
 
 const whiteList = ['/login']
 
@@ -12,10 +15,9 @@ router.beforeEach((to, from, next) => {
     store.commit('SET_BROWSERHEADERTITLE', {
       browserHeaderTitle: browserHeaderTitle
     })
-
     if (to.path === '/login') {
       next({ path: '' })
-    } else {
+    }else{
       next();
     }
   } else {
@@ -30,9 +32,7 @@ router.beforeEach((to, from, next) => {
     }
   }
 })
-
 router.afterEach(() => {
-  //NProgress.done() // 结束Progress
   setTimeout(() => {
     const browserHeaderTitle = store.getters.browserHeaderTitle
     setTitle(browserHeaderTitle)
