@@ -113,8 +113,6 @@ const user = {
         })
       })
     },
-
-    // 登出
     // 登出
     LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
