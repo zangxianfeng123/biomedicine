@@ -11,7 +11,7 @@
         <el-menu-item :index="item.path+'/'+item.children[0].path" :class="{'submenu-title-noDropdown':!isNest}">
 
           <i v-if="item.children[0].meta&&item.children[0].meta.icon" :class="item.children[0].meta.icon"></i>
-          <span v-if="item.children[0].meta&&item.children[0].meta.title" slot="title">{{item.children[0].meta.title}}</span>
+          <span v-if="item.children[0].meta&&item.children[0].meta.title" slot="title">{{item.children[0].meta.title}}11</span>
         </el-menu-item>
       </router-link>
 
@@ -28,7 +28,7 @@
           <router-link v-else :to="item.path+'/'+child.path" :key="child.name">
             <el-menu-item :index="item.path+'/'+child.path">
 
-              <!--<i v-if="item.children[0].meta&&item.children[0].meta.icon" :class="item.children[0].meta.icon"></i>-->
+              <i v-if="child.children&&child.children.length>0" :class="item.children[0].meta.icon"></i>
               <span v-if="child.meta&&child.meta.title" slot="title">{{child.meta.title}}</span>
             </el-menu-item>
           </router-link>

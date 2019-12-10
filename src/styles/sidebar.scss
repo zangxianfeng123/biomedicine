@@ -58,16 +58,16 @@
     }
     .el-submenu{
       .el-menu-item{
-        padding: 0 0 0 32px !important;
+        padding: 0 0 0 28px !important;
         font-size: 12px;
         min-width: 88px;
       }
-      .el-icon-circle-plus-outline:before{
+      .el-icon-remove-outline:before{
         content:"\E723";
       }
     }
-    .el-submenu.is-opened{
-      .el-icon-circle-plus-outline:before{
+    .el-submenu.is-opened>.el-submenu__title{
+      .el-icon-remove-outline:before{
         content:"\E722";
       }
     }

@@ -24,81 +24,98 @@ import Layout from '@/components/layout/Layout'
 **/
 export const anotherRouterMap = [
   {
-    path: '/functionalArea',
+    path: '/lookPrint',
     component: Layout,
-    meta: { title: 'functionalArea', icon: 'el-icon-remove-outline' },
+    meta: { title: '看单打印', icon: 'el-icon-remove-outline' },
     children: [
       {
-        path: 'functionalArea',
-        name: '功能区',
+        path: 'treduce1',
+        name: 'T-1看单',
         component: () => import('../views/functionalArea/functionalArea'),
-        meta: { title: '功能区', icon: 'el-icon-remove-outline' }
+        meta: { title: 'T-1看单', icon: 'el-icon-remove-outline' }
       }
     ]
   },
 ]
 export const constantRouterMap = [
-  // {
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '/login',
-  //   name: 'login',
-  //   hidden: true
-  // },
   {
     path: '',
     component: Layout,
-    redirect: '/functionalArea/functionalArea'
+    redirect: '/lookPrint/treduce1'
   },
   { path: '/404', component: () => import('../views/errorPage/404'), hidden: true },
   { path: '/401', component: () => import('../views/errorPage/401'), hidden: true },
   // 报表
   {
-    path: '/functionalArea',
+    path: '/lookPrint',
+    name: '看单打印',
     component: Layout,
-    meta: { title: 'functionalArea', icon: 'el-icon-remove-outline' },
+    meta: { title: '看单打印', icon: 'el-icon-remove-outline' },
     children: [
       {
-        path: 'functionalArea',
-        name: '功能区',
+        path: 'tplus13',
+        name: 'T+13周预测',
         component: () => import('../views/functionalArea/functionalArea'),
-        meta: { title: '功能区', icon: 'el-icon-remove-outline' }
-      }
-    ]
-  },
-  {
-    path: '/mytest',
-    component: Layout,
-    meta: { title: 'mytest', icon: 'el-icon-remove-outline' },
-    children: [
+        meta: { title: 'T+13周预测', icon: 'el-icon-remove-outline' }
+      },
       {
-        path: 'mytest',
-        name: 'mytest',
+        path: 'tplus2',
+        name: 'T+2周真单',
         component: () => import('../views/map/pointMap'),
-        meta: { title: 'mytest', icon: 'el-icon-remove-outline' }
-      }
-    ]
-  },
-  // 任务待办
-  {
-    path: '/map',
-    component: Layout,
-    //redirect: '/map/pointAccumulationMap',
-    name: 'map',
-    meta: {
-      title: '任务待办',
-      icon: 'el-icon-circle-plus-outline'
-    },
-    alwaysShow: true,
-    children: [
+        meta: { title: 'T+2周真单', icon: 'el-icon-remove-outline' }
+      },
       {
-        path: 'pointMap',
-        name: '代办列表',
+        path: 'treduce1',
+        name: 'T-1看单',
         component: () => import('../views/map/pointMap'),
-        meta: { title: '代办列表', icon: 'el-icon-s-finance' }
+        meta: { title: 'T-1看单', icon: 'el-icon-remove-outline' }
+      },
+      {
+        path: 'tlist',
+        name: 'T看单',
+        component: () => import('../views/map/pointMap'),
+        meta: { title: 'T看单', icon: 'el-icon-remove-outline' }
+      },
+      {
+        path: 'rejectslist',
+        name: '不良品看单',
+        component: () => import('../views/map/pointMap'),
+        meta: { title: '不良品看单', icon: 'el-icon-remove-outline' }
+      },
+      {
+        path: 'treduceSaleAfter',
+        name: 'T-售后备货',
+        component: () => import('../views/map/pointMap'),
+        meta: { title: 'T-售后备货', icon: 'el-icon-remove-outline' }
+      },
+      {
+        path: 'tSaleAfter',
+        name: 'T售后备货',
+        component: () => import('../views/map/pointMap'),
+        meta: { title: 'T售后备货', icon: 'el-icon-remove-outline' }
+      },
+      {
+        path: 'difference',
+        name: '看单差异',
+        //component: () => import('../views/map/pointMap'),
+        meta: { title: '看单差异', icon: 'el-icon-remove-outline' },
+        children:[
+          {
+            path: 'tSaleAfter',
+            name: 'T售后备货',
+            component: () => import('../views/map/pointMap'),
+            meta: { title: 'T售后备货', icon: 'el-icon-remove-outline' }
+          },
+          {
+            path: 'tSaleAfter1',
+            name: 'T售后备货1',
+            component: () => import('../views/map/pointMap'),
+            meta: { title: 'T售后备货1', icon: 'el-icon-remove-outline' }
+          },
+        ]
       },
     ]
-  }
+  },
 ]
 
 export default new Router({

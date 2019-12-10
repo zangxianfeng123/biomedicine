@@ -1,27 +1,20 @@
 <template>
-<div class="app-container">
-<p class="warn-content">
-            <a href="https://dafrok.github.io/vue-baidu-map/#/zh/index" target="_blank">参考百度地图 Vue Baidu Map
-            </a>
-        </p>
-</div>
+  <div class="app-container">
+    <Breadcrumb/>
+  </div>
 </template>
 
 <script>
 import { mapActions, mapMutations } from 'vuex'
+import Breadcrumb from '@/components/Breadcrumb.vue'
 export default {
+  components:{
+    Breadcrumb
+  },
   data() {
-    // }
     return {
       markers: []
     }
-  },
-  /*created() {
-    this.SET_NEW_ROUTER()
-  },*/
-  mounted(){
-    //let testooo = window.localStorage.getItem("testooo")
-    //alert(testooo)
   },
   methods:{
     ...mapMutations([
