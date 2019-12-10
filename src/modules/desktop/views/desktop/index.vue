@@ -17,7 +17,7 @@
           </h3>
           <ul class="clearfix">
             <li>
-              <a href="/workbranch/mytest/mytest"><img src="../../assets/images/resource-1.png" />
+              <a href="/lookPrint#/mytest/mytest"><img src="../../assets/images/resource-1.png" />
               <p>供应商名录</p></a>
             </li>
 

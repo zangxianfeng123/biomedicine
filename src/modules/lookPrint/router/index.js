@@ -69,13 +69,13 @@ export const constantRouterMap = [
   {
     path: '/mytest',
     component: Layout,
-    meta: { title: 'mytest', icon: 'el-icon-circle-plus-outline' },
+    meta: { title: 'mytest', icon: 'el-icon-remove-outline' },
     children: [
       {
         path: 'mytest',
         name: 'mytest',
         component: () => import('../views/map/pointMap'),
-        meta: { title: 'mytest', icon: 'el-icon-circle-plus-outline' }
+        meta: { title: 'mytest', icon: 'el-icon-remove-outline' }
       }
     ]
   },
