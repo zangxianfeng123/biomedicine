@@ -17,7 +17,7 @@
           </h3>
           <ul class="clearfix">
             <li>
-              <a href="/lookPrint#/mytest/mytest"><img src="../../assets/images/resource-1.png" />
+              <a href="/lookPrint#/lookPrint/difference/tSaleAfter"><img src="../../assets/images/resource-1.png" />
               <p>供应商名录</p></a>
             </li>
 
@@ -158,36 +158,36 @@
             看单打印
           </h3>
           <ul class="clearfix">
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/tplus13'">
               <img src="../../assets/images/print-1.png" />
               <p>T+13周预测</p></a>
             </li>
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/tplus2'">
               <img src="../../assets/images/print-2.png" />
               <p>T+2周真单</p></a>
             </li>
 
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/treduce1'">
               <img src="../../assets/images/print-3.png" />
               <p>T-1看单</p></a>
             </li>
 
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/tlist'">
               <img src="../../assets/images/print-4.png" />
               <p>T看单</p></a>
             </li>
 
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/rejectslist'">
               <img src="../../assets/images/print-5.png" />
               <p>不良品看单</p></a>
             </li>
 
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/tSaleAfter'">
               <img src="../../assets/images/print-6.png" />
               <p>T售后备货</p></a>
             </li>
 
-            <li><a href="#">
+            <li><a :href="ngConfig.lookForPrint+'/lookPrint/difference/tSaleAfter'">
               <img src="../../assets/images/print-7.png" />
               <p>看单差异</p></a>
             </li>
@@ -234,6 +234,7 @@
   </div>
 </template>
 <script>
+import ngConfig from "@/config"
 import Navbar from "@/components/layout/components/Navbar";
 import News from "./components/News";
 import Footer from "./components/Footer";
@@ -249,7 +250,8 @@ export default {
       bumen: "销售部",
       time: "2019-12-03 14:36:21",
       ip: "广东省深圳市 (IP：183.14.135.1)",
-      beforetime: "2017-07-03 14:36:21"
+      beforetime: "2017-07-03 14:36:21",
+      ngConfig
     };
   },
   components: {

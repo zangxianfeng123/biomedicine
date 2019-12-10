@@ -1,10 +1,10 @@
 <template>
   <section class="app-main">
-    <transition name="fade" mode="out-in">
+    <!--<transition name="fade" mode="out-in">-->
       <keep-alive>
         <router-view :key="key"></router-view>
       </keep-alive>
-    </transition>
+    <!--</transition>-->
   </section>
 </template>
 

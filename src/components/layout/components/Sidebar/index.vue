@@ -1,6 +1,5 @@
 <template>
   <el-scrollbar wrapClass="scrollbar-wrapper">
-    <!--<logo :isCollapse="isCollapse"></logo>-->
     <el-menu
       mode="vertical"
       :show-timeout="200"
@@ -16,9 +15,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import SidebarItem from './SidebarItem'
-//import logo from './logo'
 export default {
-  components: { SidebarItem, /*logo*/ },
+  components: { SidebarItem },
   computed: {
     ...mapGetters([
       'permission_routers'

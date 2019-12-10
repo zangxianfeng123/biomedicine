@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <Breadcrumb/>
+    <Breadcrumb/>{{msg}}
   </div>
 </template>
 
@@ -13,7 +13,8 @@ export default {
   },
   data() {
     return {
-      markers: []
+      markers: [],
+      msg:process.env.NODE_ENV
     }
   },
   methods:{

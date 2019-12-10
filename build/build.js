@@ -4,11 +4,11 @@ const chalk = require('chalk')
 
 process.env.NODE_ENV = 'production'
 // MODULE_ENV用来记录当前打包的模块名称
-console.log("process::",process.argv);
+//console.log("process::",process.argv);
 process.env.MODULE_ENV = process.argv[2]
 // MODE_ENV用来记录当前打包的模式，total代表整体打包（静态资源在同一个目录下，可以复用重复的文件），separate代表分开打包（静态资源按模块名称分别独立打包，不能复用重复的文件）
 process.env.MODE_ENV = process.argv[3]
-console.log("argv[3]::",process.argv[3]);
+//console.log("argv[3]::",process.argv[3]);
 
 // 如果有传参时，对传入的参数进行检测，如果参数非法，那么停止打包操作
 const checkModule = require('./module-conf').checkModule

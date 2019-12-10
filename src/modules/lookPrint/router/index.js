@@ -9,6 +9,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/components/layout/Layout'
+import LayoutInner from '@/components/LayoutInner'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -43,8 +44,8 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/lookPrint/treduce1'
   },
-  { path: '/404', component: () => import('../views/errorPage/404'), hidden: true },
-  { path: '/401', component: () => import('../views/errorPage/401'), hidden: true },
+  { path: '/404', component: () => import('@/errorPage/404'), hidden: true },
+  { path: '/401', component: () => import('@/errorPage/401'), hidden: true },
   // 报表
   {
     path: '/lookPrint',
@@ -95,27 +96,28 @@ export const constantRouterMap = [
         meta: { title: 'T售后备货', icon: 'el-icon-remove-outline' }
       },
       {
-        path: 'difference',
+        path: '/lookPrint/difference',
         name: '看单差异',
-        //component: () => import('../views/map/pointMap'),
+        component: LayoutInner,
         meta: { title: '看单差异', icon: 'el-icon-remove-outline' },
         children:[
           {
             path: 'tSaleAfter',
-            name: 'T售后备货',
-            component: () => import('../views/map/pointMap'),
-            meta: { title: 'T售后备货', icon: 'el-icon-remove-outline' }
+            name: '看单差异1',
+            component: () => import('../views/functionalArea/functionalArea'),
+            meta: { title: '看单差异1', icon: 'el-icon-remove-outline' }
           },
           {
             path: 'tSaleAfter1',
-            name: 'T售后备货1',
+            name: '看单差异2',
             component: () => import('../views/map/pointMap'),
-            meta: { title: 'T售后备货1', icon: 'el-icon-remove-outline' }
+            meta: { title: '看单差异2', icon: 'el-icon-remove-outline' }
           },
         ]
       },
     ]
   },
+  { path: '*', redirect: '/404', hidden: true }
 ]
 
 export default new Router({
@@ -124,84 +126,3 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
-export const asyncRouterMap = [
-  {
-    path: '/permission',
-    component: Layout,
-    redirect: '/permission/page',
-    name: 'permission',
-    alwaysShow: true, // will always show the root menu
-    meta: {
-      title: '任务调度',
-      icon: 'el-icon-s-data',
-      roles: ['admin', 'editor'] // you can set roles in root nav
-    },
-    children: [{
-      path: 'page',
-      component: () => import('../views/permission/page'),
-      name: '任务发布',
-      meta: {
-        title: '任务发布',
-        icon: 'el-icon-s-data',
-        roles: ['admin'] // or you can only set roles in sub nav
-      }
-    }, {
-      path: 'directive',
-      component: () => import('../views/permission/directive'),
-      name: '任务列表',
-      meta: {
-        title: '任务列表',
-        icon: 'el-icon-s-data',
-        // if do not set roles, means: this page does not require permission
-      }
-    },{
-      path: 'aa',
-      component: () => import('../views/permission/directive'),
-      name: '任务分析 ',
-      meta: {
-        title: '任务分析',
-        icon: 'el-icon-s-data',
-        // if do not set roles, means: this page does not require permission
-      }
-    }]
-  },
-  {
-    path: '/error',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'errorPages',
-    meta: {
-      title: '系统管理',
-      icon: 'el-icon-s-data'
-    },
-    children: [
-      { 
-        path: '401', 
-        component: () => import('../views/errorPage/401'), 
-        name: 'page401', 
-        meta: { title: 'page401',  icon: 'el-icon-s-data'}
-      },
-      { 
-        path: '404', 
-        component: () => import('../views/errorPage/404'), 
-        name: 'page404', 
-        meta: { title: 'page404', icon: 'el-icon-s-data'}
-      }
-    ]
-  },
-  // 错误日志
-  {
-    path: '/errorLog',
-    component: Layout,
-    hidden: true,
-
-    children: [
-      {
-        path: 'errorLog',
-        name: 'errorLog',
-        component: () => import('../views/errorLog/errorLog'),
-        meta: { title: 'Errorlog', icon: 'errorLog' }
-      }
-    ]
-  },
-  { path: '*', redirect: '/404', hidden: true }]

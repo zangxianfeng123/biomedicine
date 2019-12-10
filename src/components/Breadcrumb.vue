@@ -1,8 +1,7 @@
 <template>
     <div class="bio-breadcrumb-box">
         <el-breadcrumb separator="/">
-            <el-breadcrumb-item>看单打印</el-breadcrumb-item>
-            <el-breadcrumb-item>{{currentPathName}}</el-breadcrumb-item>
+            <el-breadcrumb-item v-for="item in currentPathJson" :key="item.name">{{item.name}}</el-breadcrumb-item>
         </el-breadcrumb>
     </div>
 </template>
@@ -12,11 +11,12 @@ export default {
     name: 'Breadcrumb',
     data() {
         return {
-            currentPathName:''
+            currentPathJson:[]
         }
     },
     mounted(){
-        this.currentPathName = this.$route.name;
+        console.log("看一下：",this.$route);
+        this.currentPathJson = this.$route.matched;
     },
     /*watch: {
         '$route':function(to, from) {

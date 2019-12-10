@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <!--登入动画-->
-    <transition name="rotate-fall">
+    <!--<transition name="rotate-fall">-->
     <router-view  class="app-router-view"></router-view>
-    </transition>
+    <!--</transition>-->
   </div>
 </template>
 
