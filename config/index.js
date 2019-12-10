@@ -67,7 +67,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     // 这里的路径改成相对路径，原来是assetsPublicPath: '/',
     // assetsPublicPath: '/',
-    assetsPublicPath: assetsPublicPath,//'/workbranch/',
+    assetsPublicPath: assetsPublicPath,//'/lookPrint/',
 
     /**
      * Source Maps

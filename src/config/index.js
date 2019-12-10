@@ -3,14 +3,12 @@ let ngConfig = {}
 if (env.NODE_ENV === 'development') {
     ngConfig={
         modularResources:'',
-        lookForPrint:'/lookPrint#'
+        lookForPrint:'/lkp#'
     }
-} else if (env.NODE_ENV === 'production') {
+} else{
     ngConfig={
         modularResources:'',
-        lookForPrint:'/lookPrint'
+        lookForPrint:'/lkp'
     }
-} else if (env.NODE_ENV === 'test') {
-    ngConfig = {}
 }
 export default ngConfig;

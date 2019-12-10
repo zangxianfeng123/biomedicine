@@ -1,4 +1,4 @@
-import { login, logout, getInfo } from '@workbranch/api/login'
+import { login, logout, getInfo } from '../../api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import { setStore, getStore, removeStore } from '@/utils/store'
 const user = {

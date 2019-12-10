@@ -47,9 +47,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': resolve('src'),
-      '@workbranch': resolve('src/modules/lookPrint'),
       '@desktop': resolve('src/modules/desktop'),
-      '@C':resolve('src/modules/c'),
     }
   },
   module: {

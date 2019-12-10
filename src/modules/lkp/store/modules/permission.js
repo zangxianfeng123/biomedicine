@@ -1,4 +1,4 @@
-import { constantRouterMap, anotherRouterMap } from '@workbranch/router'
+import { constantRouterMap, anotherRouterMap } from '../../router'
 
 const permission = {
   state: {
